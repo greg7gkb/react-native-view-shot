@@ -8,9 +8,9 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.net.Uri;
-import android.support.annotation.IntDef;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringDef;
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringDef;
 import android.util.Base64;
 import android.util.Log;
 import android.view.TextureView;
@@ -323,7 +323,7 @@ public class ViewShot implements UIBlock {
             throw new RuntimeException("Impossible to snapshot the view: view is invalid");
         }
 
-        // evaluate real height
+        //evaluate real height
         if (snapshotContentContainer) {
             h = 0;
             ScrollView scrollView = (ScrollView) view;
@@ -411,7 +411,7 @@ public class ViewShot implements UIBlock {
         do {
             ms.add(iterator);
 
-            iterator = (View) iterator.getParent();
+            iterator = (View)iterator.getParent();
         } while (iterator != root);
 
         // apply transformations from parent --> child order
